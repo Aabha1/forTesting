@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CommentForm from "./components/CommentForm";
+import CommetList from "./components/CommetList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Testing my frist app</h1>
+      <input type="text" placeholder="type your name here" />
+      <ul>
+        <li>Shinchan</li>
+        <li>Doreamon</li>
+      </ul>
+      <CommentForm />
+      <CommetList allComments={[
+        { id: 1, text: "Happy Diwali" },
+        { id: 2, text: "Festival of lights" },
+        { id: 3, text: "Happy Holi" },
+        { id: 4, text: "Festival of colors" }
+      ]} />
     </div>
   );
 }
